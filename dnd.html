@@ -2,31 +2,52 @@
 <html>
     <head>
         <title>Dungeon and Dragons DM Tracker</title>
+        <script src="xml.js"></script>
         <style>
             table{
                 border: white solid 1px;
                 margin: 10px;
+                text-align: center;
             }
             
             tr{
                 border: white solid 2px;
+                margin: 10px;
+                font-family: sans-serif;
+                text-align: center;
             }
+            
+            th{
+                text-align: center;
+                width: 100px;
+                font-size: 24px}
             
             td{
                 border: white solid 1px;
+                margin: 10px;
+                text-align: center;
             }
             
             html{
                 background-color: black;
                 color: white;
+                text-align: center;
             }
+            
+            input[type=number]{
+                width: 40px;
+                background: white;
+                text-align: left;
+                
+            }
+            
         </style>
     
     </head>
     <body>
         <h1>Dungeon and Dragons DM Tracker</h1>
-	
         <table>
+            <h2>Current Players</h2>
             <tr>
                 <th></th>
                 <th>Player</th>
@@ -70,5 +91,58 @@
                 <th><button>Remove</button></th>
             </tr>
         </table>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Health</th>
+                <th>AC </th>
+                <th>Initiative</th>
+                <th>STR</th>
+                <th>DEX</th>
+                <th>CON</th>
+                <th>INT</th>
+                <th>WIS</th>
+                <th>CHA</th>
+                <th></th>                
+            </tr>
+            <tr>
+                <th><input type="text"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><input type="number"/></th>
+                <th><button>ADD PLAYER</button></th>
+            </tr>
+        </table>
+        <h2>Quick Spell Lookup</h2>
+        <h3>What spell do you want to look up? <input id="spell" type="text"/><button onclick="addSpell()"> Look Up </button></h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Casting Time</th>
+                <th>Components</th>
+                <th>School</th>
+                <th>Duration</th>
+                <th>Level</th>
+                <th>Range</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td id="changeName"></td>
+                <td id="changeTime"></td>
+                <td id="changeComponents"></td>
+                <td id="changeType"></td>
+                <td id="changeDuration"></td>
+                <td id="changeLevel"></td>
+                <td id="changeRange"></td>
+                <th><button>Remove</button></th>
+            </tr>
+        </table>
+        <p id="changeDamage"></p>
     </body>
 </html>
