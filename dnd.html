@@ -49,7 +49,6 @@
         <table>
             <h2>Current Players</h2>
             <tr>
-                <th></th>
                 <th>Player</th>
                 <th>HitPoints</th>
                 <th>AC</th>
@@ -63,62 +62,45 @@
                 <th></th>
             </tr>
             <tr>
-                <th><button>Modify</button></th>
-                <td>Braden Steiner</td>
-                <td>20</td>
-                <td>12</td>
-                <td>2</td>
-                <td>8</td>
-                <td>14</td>
-                <td>12</td>
-                <td>17</td>
-                <td>12</td>
-                <td>13</td>
-                <th><button>Remove</button></th>
-            </tr>
-            <tr>
-                <th><button>Modify</button></th>
-                <td>David Pruitt</td>
-                <td>30</td>
-                <td>14</td>
-                <td>4</td>
-                <td>10</td>
-                <td>15</td>
-                <td>11</td>
-                <td>14</td>
-                <td>14</td>
-                <td>18</td>
-                <th><button>Remove</button></th>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th>Player</th>
-                <th>Health</th>
-                <th>AC </th>
-                <th>Initiative</th>
-                <th>STR</th>
-                <th>DEX</th>
-                <th>CON</th>
-                <th>INT</th>
-                <th>WIS</th>
-                <th>CHA</th>
-                <th></th>                
-            </tr>
-            <tr>
-                <th><input type="text"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><input type="number"/></th>
-                <th><button>ADD PLAYER</button></th>
+                <td>
+                    <ul id="MISCLIST"></ul>
+                </td>
+                <td>
+                    <ul id="HITPOINTS"></ul>
+                </td>
+                <td>
+                    <ul id="AC"></ul>
+                </td>
+                <td>
+                    <ul id="INI"></ul>
+                </td>
+                <td>
+                    <ul id="STR"></ul>
+                </td>
+                <td>
+                    <ul id="DEX"></ul>
+                </td>
+                <td>
+                    <ul id="CON"></ul>
+                </td>
+                <td>
+                    <ul id="INTI"></ul>
+                </td>
+                <td>
+                    <ul id="WIS"></ul>
+                </td>
+                <td>
+                    <ul id="CHA"></ul>
+                </td>
+                <th>
+                    <ul id="REMOVE"></ul>
+                </th>
             </tr>
         </table>
+        
+        <h2>Add a Player</h2>
+        <input type="text" id="MISC">
+        <button onclick="Insert()">ADD</button>
         <h2>Quick Spell Lookup</h2>
         <h3>What spell do you want to look up? <input id="spell" type="text"/><button onclick="Start()"> Look Up </button><br/>Note: it is case sensitive</h3>
         <table>
@@ -130,7 +112,6 @@
                 <th>Duration</th>
                 <th>Level</th>
                 <th>Range</th>
-                <th></th>
             </tr>
             <tr>
                 <td id="changeName"></td>
@@ -140,9 +121,9 @@
                 <td id="changeDuration"></td>
                 <td id="changeLevel"></td>
                 <td id="changeRange"></td>
-                <th><button>Remove</button></th>
             </tr>
-        </table>
-        <p id="changeDamage"></p>
+            </table>
+            <p id="changeDamage"></p>
+        </h3>
     </body>
 </html>
